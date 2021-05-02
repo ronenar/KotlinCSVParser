@@ -45,7 +45,7 @@ public class JavaCall {
         }
     }
 
-    public static void main(String[] args) throws CSVFileException //throws CSVFileException
+    public static void main(String[] args)
     {
         String path = "./demo/data.csv";
         String name = "data.csv";
@@ -84,21 +84,26 @@ public class JavaCall {
 
             } catch (CSVFileException e) {
 
-                System.out.println(e.getLocalizedMessage());
-                e.printStackTrace();
+                try{
+                    System.out.println(e.getLocalizedMessage());
+                    e.printStackTrace();
 
-                Utils.printMissingCells(data);
-                showMissingCells(data);
+                    Utils.printMissingCells(data);
+                    showMissingCells(data);
 
-                file.compile(data, map, 100);
+                    file.compile(data, map, 100);
 
-                //alternativly using default value
-                //file.compileWithDefaultValue(data, map); // using default value 1 for missing cells
+                    //alternativly using default value
+                    //file.compileWithDefaultValue(data, map); // using default value 1 for missing cells
 
-                System.out.println("After compile:");
-                Utils.printMissingCells(data);// print there's no missing cells
-                file.print(); // show after fix missing cells
-                file.saveCompiledFile(compiledFilename);
+                    System.out.println("After compile:");
+                    Utils.printMissingCells(data);// print there's no missing cells
+                    file.print(); // show after fix missing cells
+                    file.saveCompiledFile(compiledFilename);
+
+                }catch (CSVFileException ex){
+                    ex.printStackTrace();
+                }
             }
 
         } catch (FileNotFoundException e) {
@@ -107,6 +112,5 @@ public class JavaCall {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        String cellData = data.getCellValue(1, 1);
     }
 }
