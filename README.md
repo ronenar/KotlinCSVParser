@@ -56,12 +56,6 @@ Error: Failed to get data on Cell (1,16)
 
 Error: Failed to get data on Cell (2,16)
 
-Error: Failed to get data on Cell (0,16)
-
-Error: Failed to get data on Cell (1,16)
-
-Error: Failed to get data on Cell (2,16)
-
 Error: Column 16 is empty!!! - no average for this column.
 
 Error: Not Valid data - missing data
