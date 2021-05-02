@@ -65,18 +65,24 @@ fun main(args: Array<String>) {
         }
         catch (e: CSVFileException){
 
-            println(e.localizedMessage)
-            Utils.printMissingCells(data)
-            showMissingCells(data)
+            try
+            {
+                println(e.localizedMessage)
+                Utils.printMissingCells(data)
+                showMissingCells(data)
 
-            file.compile(data, map, 100)
-            //file.compile(data, map) // using default value 1 for missing cells
+                file.compile(data, map, 100)
+                //file.compile(data, map) // using default value 1 for missing cells
 
-            println("After compile:")
-            Utils.printMissingCells(data) // print there's no missing cells
-            file.print() // show after fix missing cells
+                println("After compile:")
+                Utils.printMissingCells(data) // print there's no missing cells
+                file.print() // show after fix missing cells
 
-            file.saveCompiledFile(compiledFilename)
+                file.saveCompiledFile(compiledFilename)
+
+            }catch (ex: CSVFileException){
+                ex.printStackTrace()
+            }
         }
 
     } catch (e: FileNotFoundException) {

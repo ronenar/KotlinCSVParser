@@ -169,7 +169,7 @@ class CSVFileData(val content: ArrayList<CSVFileRow>) {
     fun average(col: Int): String {
 
         var columnList = getColListItems(col)
-        val doubleArray = Utils.convertToDouble(getColListItems(col))
+        val doubleArray = Utils.convertToDouble(columnList)
         if (doubleArray.isEmpty()){
             throw CSVFileException("Error: Column $col is empty!!! - no average for this column.")
         }
