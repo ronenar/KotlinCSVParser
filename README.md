@@ -64,7 +64,6 @@ PrintMissingCells():
 
 Found missingCells:
 
-Cell(1,1) =  -1.0
 
 Cell(1,3) =  
 
