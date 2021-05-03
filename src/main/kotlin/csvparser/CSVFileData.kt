@@ -112,7 +112,7 @@ class CSVFileData(val content: ArrayList<CSVFileRow>) {
         for (row in 0..numRows - 1) {
             rowData = getRowItems(row)
             for (col in 0..rowData.size() - 1) {
-                str = rowData.row[col]
+                str = rowData.row[col].trim()
                 if (str == Utils.EMPTY || !Utils.checkIfNumber(str)) {
                     cellList.add(Cell(row, col,str))
                 }

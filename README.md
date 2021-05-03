@@ -72,7 +72,6 @@ Cell(1,7) =
 
 Cell(2,2) =  
 
-Get Data for specific cell 1,1 is  -1.0
 
 Get Data for specific cell 1,3 is  
 

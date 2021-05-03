@@ -16,7 +16,7 @@ object Utils {
      * @return true of false according to string param
      */
     fun isNumber(str: String?): Boolean {
-        return if (str.isNullOrEmpty()) false else str.all { Character.isDigit(it) }
+        return if (str.isNullOrEmpty()) false else str.trim().all { Character.isDigit(it) }
     }
 
     /**
@@ -26,8 +26,8 @@ object Utils {
      * @return true of false according to string param
      */
     fun isNegativeNumber(str: String):Boolean{
-        var isDoubleNegative = Pattern.matches(DOUBLE_NEGATIVE, str)
-        var isIntegerNegative = Pattern.matches(INTEGER_NEGATIVE, str)
+        var isDoubleNegative = Pattern.matches(DOUBLE_NEGATIVE, str.trim())
+        var isIntegerNegative = Pattern.matches(INTEGER_NEGATIVE, str.trim())
         return isDoubleNegative || isIntegerNegative
     }
 
@@ -38,7 +38,7 @@ object Utils {
      * @return true of false according to string param
      */
     fun isPositiveDoubleNumber(str: String):Boolean{
-        return Pattern.matches(DOUBLE_POSITIVE, str)
+        return Pattern.matches(DOUBLE_POSITIVE, str.trim())
     }
 
     /**
@@ -48,6 +48,7 @@ object Utils {
      * @return true of false according to string param
      */
     fun checkIfNumber(str: String):Boolean{
+        val str = str.trim()
         return !(str == EMPTY ||
                 (!isNumber(str) &&
                         !isNegativeNumber(str) &&
