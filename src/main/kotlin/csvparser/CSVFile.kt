@@ -24,7 +24,6 @@ class CSVFile() {
 
     /**
      * @constructor - Constructs a new CSVFile by filename
-     * The cause is not initialized.
      * @param   filename  Filename of csv file
      */
     constructor  (filename: String) : this(){
@@ -33,7 +32,6 @@ class CSVFile() {
 
     /**
      * @constructor - Constructs a new CSVFile by filename
-     * The cause is not initialized.
      * @param   fullpath  Fullpath of csv file
      */
     constructor  (fullpath: Path) : this(){
@@ -43,8 +41,7 @@ class CSVFile() {
     }
 
     /**
-     * @constructor - Constructs a new CSVFile by filename
-     * The cause is not initialized.
+     * @constructor - Constructs a new CSVFile by filename.
      * @param   filStream  FilStream of csv file
      */
     constructor  (filStream: InputStream) : this() {
