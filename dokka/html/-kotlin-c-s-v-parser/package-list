@@ -1,9 +1,0 @@
-$dokka.format:html-v1
-$dokka.linkExtension:html
-$dokka.location:////PointingToDeclaration/[root]/index.html
-$dokka.location:/JavaCall///PointingToDeclaration/[root]/-java-call/index.html
-$dokka.location:/JavaCall/demoFunctions/#csvparser.CSVFileData/PointingToDeclaration/[root]/-java-call/demo-functions.html
-$dokka.location:/JavaCall/main/#java.lang.String[]/PointingToDeclaration/[root]/-java-call/main.html
-$dokka.location:/JavaCall/showMissingCells/#csvparser.CSVFileData/PointingToDeclaration/[root]/-java-call/show-missing-cells.html
-csvparser
-
